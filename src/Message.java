@@ -7,9 +7,10 @@ public class Message {
     private int retryCount = 0;
     public int successChance = rand.nextInt(0,100);
     //c
-        Message(String payload, String messageId){
+        Message(String payload, String messageId, int successChance){
             this.payload = payload;
             this.messageId = messageId;
+            this.successChance = successChance;
         }
     //m
     public String toString(){
@@ -17,5 +18,8 @@ public class Message {
     }
     public void retryCountUp(){
         this.retryCount++;
+    }
+    public int getRetryCount(){
+        return retryCount;
     }
 }
