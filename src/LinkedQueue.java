@@ -53,5 +53,7 @@ public class LinkedQueue<T> implements QueueInterface<T>{
 		return front.getInfo();
 	}
 
-
+	public int getNumElements(){
+	    return this.numElements;
+	}
 }
